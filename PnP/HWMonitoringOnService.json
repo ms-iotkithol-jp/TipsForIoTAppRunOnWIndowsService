@@ -1,0 +1,66 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:embeddedgeorge:example:HWMonitoringOnService;1",
+  "@type": "Interface",
+  "displayName": "Haredware Monitoring on Service",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "monitoring",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "ProcessorTime",
+            "displayName": "% Processor Time Total",
+            "schema": "double"
+          },
+          {
+            "name": "timestamp",
+            "schema": "dateTime"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "intervalMSec",
+      "displayName": "Interval(msec)",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "configuration",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "IntervalMSec",
+            "displayName": "Interval(msec)",
+            "schema": "integer"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "monitor",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "ProcessorTime",
+            "displayName": "% Processor Time Total",
+            "schema": "double"
+          },
+          {
+            "name": "Timestamp",
+            "schema": "dateTime"
+          }
+        ]
+      },
+      "writable": false
+    }
+  ]
+}
